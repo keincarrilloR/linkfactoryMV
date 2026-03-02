@@ -39,7 +39,6 @@ interface Informativo {
 }
 
 export interface Variables {
-  // Molino 1
   presNitrogeno?: Valores
   tempZinc?: Valores
   flujoNitrogeno?: Valores
@@ -51,18 +50,15 @@ export interface Variables {
   corrArmaduraBreakdown?: Valores
   tempAguaDestEntPreTocco?: Valores
   tempAguaDestSalPreTocco?: Valores
-
-  // Molino 2
   corrArmaduraFormador?: Valores
   corrArmaduraCalibrador?: Valores
-
-  // Compartidas (Mol1 + Mol2)
   velLinea?: Valores
   voltThermatool?: Valores
   corrThermatool?: Valores
   tempAguaDestEntThermatool?: Valores
   tempAguaDestSalThermatool?: Valores
   potThermatool?: Valores
+  voltPlacaThermatool?: Valores
 }
 
 // Tipo para cada Maquina
