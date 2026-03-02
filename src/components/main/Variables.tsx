@@ -36,7 +36,7 @@ const Variables = ({ maquinaId }: Props) => {
       value,
       min,
       max,
-      color: getColor(min, max, nom, variable.actual ?? 0, estado) as colors,
+      color: getColor(min, max, nom, value ?? 0, estado) as colors,
       grafana,
       icon
     }
