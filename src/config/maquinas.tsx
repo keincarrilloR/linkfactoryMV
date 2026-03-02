@@ -19,9 +19,11 @@ interface MaquinaKey {
 }
 
 export const MAQUINAS = [
-  { id: 'mx001', nombre: 'Molino 1' },
-  { id: 'mx002', nombre: 'Molino 2' },
-  { id: 'mx003', nombre: 'Molino 3' }
+  { id: 'mxm001', nombre: 'Molino 1', galvanizado: true, variables: true },
+  { id: 'mxm002', nombre: 'Molino 2', galvanizado: false, variables: true },
+  { id: 'mxm003', nombre: 'Molino 3', galvanizado: false, variables: true },
+  { id: 'mxsl1', nombre: 'Slitter', galvanizado: false, variables: false },
+  { id: 'mxrs1', nombre: 'Roscadora', galvanizado: false, variables: false }
 ]
 
 const round2 = (v: number) => Number(v.toFixed(2))
@@ -149,5 +151,114 @@ export const VARIABLES_KEYS: MaquinaKey[][] = [
     }
   ],
   // Molino 2
-  []
+  [
+    {
+      key: 'velLinea',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/644ae91e095e440297501cff25d92c5a?orgId=1',
+      icon: <Gauge className={classesIcons} />,
+      transform: round2
+    },
+    {
+      key: 'corrArmaduraFormador',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/508d743cb31248158bfd82f6628cf698?orgId=1',
+      icon: <PlugZap className={classesIcons} />,
+      transform: div100
+    },
+    {
+      key: 'corrArmaduraCalibrador',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/4b6fb52becca446cafdee25813d4f610?orgId=1',
+      icon: <PlugZap className={classesIcons} />,
+      transform: div100
+    },
+    {
+      key: 'corrThermatool',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/28b63efd65484426bf5bfd861d9a6dad?orgId=1',
+      icon: <PlugZap className={classesIcons} />,
+      transform: round2
+    },
+    {
+      key: 'potThermatool',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/fdac2bb75fd04f35870e6ad5a2e08826',
+      icon: <Zap className={classesIcons} />,
+      transform: round2
+    },
+    {
+      key: 'voltThermatool',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/2252016f7e1d451ebccb0602c072d319?orgId=1',
+      icon: <Zap className={classesIcons} />,
+      transform: round2
+    },
+    {
+      key: 'tempAguaDestEntThermatool',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/074821be96b94cb68464d899e19b43a6?orgId=1',
+      icon: <Droplet className={classesIcons} />,
+      transform: round2
+    },
+    {
+      key: 'tempAguaDestSalThermatool',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/5cdaa80e0eb94777884b74fa4cef7d04?orgId=1',
+      icon: <Droplet className={classesIcons} />,
+      transform: round2
+    }
+  ],
+  // Molino 3
+  [
+    {
+      key: 'velLinea',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/632fad6e27d84225b6d9a6d3231c6a5e?orgId=1',
+      icon: <Gauge className={classesIcons} />,
+      transform: round2
+    },
+    {
+      key: 'corrArmaduraFormador',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/71dcb951f94f40ebb13492da4dd6c6c2?orgId=1',
+      icon: <PlugZap className={classesIcons} />,
+      transform: div100
+    },
+    {
+      key: 'corrArmaduraCalibrador',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/00f497e8fb524a5799e1f80396174426?orgId=1',
+      icon: <PlugZap className={classesIcons} />,
+      transform: div100
+    },
+    {
+      key: 'potThermatool',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/2b9be34bb5a043839d21f83e0df913df?orgId=1',
+      icon: <Zap className={classesIcons} />,
+      transform: round2
+    },
+    {
+      key: 'voltPlacaThermatool',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/6f882cc348d149fc989e03bd8ef3b4b8?orgId=1',
+      icon: <Zap className={classesIcons} />,
+      transform: round2
+    },
+    {
+      key: 'tempAguaDestEntThermatool',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/e52314340ff14581a9210af258aff280?orgId=1',
+      icon: <Droplet className={classesIcons} />,
+      transform: round2
+    },
+    {
+      key: 'tempAguaDestSalThermatool',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/b20ffa2b4b64439797f7f8f94dc2f321?orgId=1',
+      icon: <Droplet className={classesIcons} />,
+      transform: round2
+    }
+  ]
 ]
