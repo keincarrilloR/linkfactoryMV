@@ -28,8 +28,8 @@ export const SocketProvider = ({ children }: SocketProviderProps) => {
 
   // La primera vez que se monta el componente, se conecta al WS
   useEffect(() => {
-    // const socket = new WebSocket(import.meta.env.VITE_SOCKET_URL)
-    const socket = new WebSocket('ws://localhost:8080') // URL del servidor WebSocket
+    const socket = new WebSocket(import.meta.env.VITE_SOCKET_URL)
+    //const socket = new WebSocket('ws://localhost:8080') // URL del servidor WebSocket
     // Apuntamos la referencia al socket
     socketRef.current = socket
 
@@ -43,7 +43,7 @@ export const SocketProvider = ({ children }: SocketProviderProps) => {
     socket.onmessage = event => {
       try {
         const data = JSON.parse(event.data) // Convertimos el mensaje a JSON
-        const ids = ['mx001', 'mx002', 'mx003', 'mxsl1', 'mxrs1'] // IDs de las máquinas que esperamos recibir
+        const ids = ['mxm001', 'mxm002', 'mxm003', 'mxsl1', 'mxrs1'] // IDs de las máquinas que esperamos recibir
 
         const nuevas: MaquinaData[] = ids
           .filter(id => data[id]) // Buscamos el id(maquina) que tiene data
