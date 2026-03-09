@@ -8,12 +8,12 @@ import CodigoColores from '../components/CodigoColores'
 import Conectado from '../components/Conectado'
 
 const MaquinaPage = () => {
-  const { id } = useParams<{ id: string }>()
-  const maquina = MAQUINAS.find(m => m.id === id)
+  const { id } = useParams<{ id: string }>() // Obtiene el id de los parametros
+  const maquina = MAQUINAS.find(m => m.maquinaId === id) // Busca si existe el id en MAQUINAS
 
   if (!maquina) return <Navigate to="/" replace />
 
-  const { id: maquinaId, nombre, galvanizado, variables } = maquina
+  const { maquinaId, nombre, galvanizado, variables } = maquina
 
   return (
     <DashboardLayout title={`${nombre} — MX`} backLink>

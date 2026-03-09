@@ -15,7 +15,9 @@ const Galvanizado = ({ maquinaId }: Props) => {
 
   if (!variables) return null
 
-  const maquinaIndex = MAQUINAS.findIndex(maquina => maquina.id === maquinaId)
+  const maquinaIndex = MAQUINAS.findIndex(
+    maquina => maquina.maquinaId === maquinaId
+  )
   const keysActuales = GALVANIZADO_KEYS[maquinaIndex] ?? []
   const items = keysActuales.map(({ key, grafana, icon, transform }) => {
     const variable = variables[key]
