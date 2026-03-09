@@ -13,7 +13,6 @@ const CardEstado = ({ maquinaId }: Props) => {
   const estado = data?.informativo?.estadoYRun?.estado
   const turno = data?.informativo?.estadoYRun?.turno
   const piezas = data?.informativo?.estadoYRun?.piezas
-  const maquina = data?.informativo?.tonelaje?.maquina
 
   return (
     <div
@@ -21,7 +20,7 @@ const CardEstado = ({ maquinaId }: Props) => {
               ${estado === 'Corriendo' ? ' bg-on-fondo' : ' bg-off-fondo'}`}
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
-        <Estado estado={estado} maquina={maquina} />
+        <Estado estado={estado} />
         <PiezasTurno turno={turno} piezas={piezas} />
       </div>
     </div>

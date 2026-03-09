@@ -2,10 +2,9 @@ import { Play, Square } from 'lucide-react'
 
 interface Props {
   estado?: string
-  maquina?: string
 }
 
-const Estado = ({ estado = 'Detenido', maquina = '' }: Props) => {
+const Estado = ({ estado = 'Detenido' }: Props) => {
   return (
     <div className="flex items-center gap-3">
       {estado === 'Corriendo' ? (
@@ -15,12 +14,7 @@ const Estado = ({ estado = 'Detenido', maquina = '' }: Props) => {
       )}
 
       <div className="flex flex-col">
-        <span className="text-xs sm:text-lg opacity-70">
-          Estado{' '}
-          {maquina && (
-            <span className="text-xs sm:text-lg font-medium">{maquina}</span>
-          )}
-        </span>
+        <span className="text-xs sm:text-lg opacity-70">Estado </span>
         <span
           className={`text-sm sm:text-lg font-semibold ${
             estado === 'Corriendo' ? 'text-on' : 'text-off'
