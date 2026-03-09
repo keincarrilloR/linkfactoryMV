@@ -19,11 +19,36 @@ interface MaquinaKey {
 }
 
 export const MAQUINAS = [
-  { id: 'mxm001', nombre: 'Molino 1', galvanizado: true, variables: true },
-  { id: 'mxm002', nombre: 'Molino 2', galvanizado: false, variables: true },
-  { id: 'mxm003', nombre: 'Molino 3', galvanizado: false, variables: true },
-  { id: 'mxsl1', nombre: 'Slitter', galvanizado: false, variables: false },
-  { id: 'mxrs1', nombre: 'Roscadora', galvanizado: false, variables: false }
+  {
+    maquinaId: 'mxm001',
+    nombre: 'Molino 1',
+    galvanizado: true,
+    variables: true
+  },
+  {
+    maquinaId: 'mxm002',
+    nombre: 'Molino 2',
+    galvanizado: false,
+    variables: true
+  },
+  {
+    maquinaId: 'mxm003',
+    nombre: 'Molino 3',
+    galvanizado: false,
+    variables: true
+  },
+  {
+    maquinaId: 'mxsl1',
+    nombre: 'Slitter',
+    galvanizado: false,
+    variables: false
+  },
+  {
+    maquinaId: 'mxrs1',
+    nombre: 'Roscadora',
+    galvanizado: false,
+    variables: false
+  }
 ]
 
 const round2 = (v: number) => Number(v.toFixed(2))
