@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom'
 import { MAQUINAS } from '../config/maquinas'
 import DashboardLayout from '../layout/Layout'
+import { useSocket } from '../hooks/useSocket'
+;`p-3 sm:p-4 rounded-lg transition-all 
+              `
 
 const Home = () => {
+  const { getMaquina } = useSocket()
+
   return (
     <DashboardLayout>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-full">
@@ -10,7 +15,7 @@ const Home = () => {
           <Link
             key={maquinaId}
             to={`/maquina/${maquinaId}`}
-            className="bg-panel border border-border rounded-xl px-6 py-5 hover:bg-elevated hover:border-white/20 transition-all group"
+            className={`${getMaquina(maquinaId)?.informativo.estadoYRun.estado === 'Corriendo' ? ' bg-on-fondo' : ' bg-off-fondo'} border border-border rounded-xl px-6 py-5 hover:bg-elevated hover:border-white/20 transition-all group`}
           >
             <div className="flex items-center justify-between">
               <div>

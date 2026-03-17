@@ -48,7 +48,6 @@ export const SocketProvider = ({ children }: SocketProviderProps) => {
         const nuevas: MaquinaData[] = ids
           .filter(id => data[id]) // Buscamos el id(maquina) que tiene data
           .map(id => ({ id, ...data[id] })) // Creamos un nuevo objeto con el id y su data
-
         // Actualiza el estado con los nuevos datos
         setMaquinasData(nuevas)
       } catch (error) {
