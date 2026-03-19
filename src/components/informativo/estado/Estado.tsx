@@ -14,9 +14,9 @@ const Estado = ({ estado = 'Detenido' }: Props) => {
       )}
 
       <div className="flex flex-col">
-        <span className="text-xs sm:text-lg opacity-70">Estado </span>
+        <span className="text-xs sm:text-md opacity-70">Estado </span>
         <span
-          className={`text-sm sm:text-lg font-semibold ${
+          className={`text-sm sm:text-md font-semibold ${
             estado === 'Corriendo' ? 'text-on' : 'text-off'
           }`}
         >

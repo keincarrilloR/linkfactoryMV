@@ -29,15 +29,15 @@ const StatusCard = ({
       <div
         className={`${colors[color]} h-full flex flex-col justify-between rounded-lg flex-1 p-5 text-white shadow-lg hover:shadow-xl transition-shadow`}
       >
-        <h3 className="text-lg uppercase tracking-wide opacity-90 mb-2 font-semibold">
+        <h3 className="text-xs uppercase tracking-wide opacity-90 mb-2 font-semibold">
           {title}
         </h3>
         <div className="flex items-center justify-center gap-1">
           {children}
-          <p className="text-4xl font-bold mb-3">{value}</p>
+          <p className="text-2xl font-bold mb-3">{value}</p>
         </div>
 
-        <div className="flex justify-between text-lg pt-3 border-t border-white/30">
+        <div className="flex justify-between text-xs pt-3 border-t border-white/30">
           <span className="opacity-80">Min: {min}</span>
           <span className="opacity-80">Max: {max}</span>
         </div>

@@ -44,7 +44,7 @@ const Galvanizado = ({ maquinaId }: Props) => {
   return (
     <>
       <Title title="Galvanizado" />
-      <section className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4">
+      <section className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
         {items.map(item => (
           <StatusCard
             key={item!.key}

@@ -2,7 +2,7 @@ import { colorItems } from '../styles/colors'
 
 const CodigoColores = () => {
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-md">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-md">
       <span className="opacity-40 uppercase tracking-widest shrink-0">
         Código de colores
       </span>

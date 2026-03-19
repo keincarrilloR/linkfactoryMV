@@ -9,7 +9,7 @@ interface Props {
 const PiezasTurno = ({ turno = '--', piezas = 0 }: Props) => {
   return (
     <div className="flex items-center gap-6 sm:gap-10">
-      <span className="text-sm sm:text-lg opacity-70">
+      <span className="text-sm sm:text-md opacity-70">
         {turno || 'Sin turno'}
       </span>
 
@@ -17,10 +17,10 @@ const PiezasTurno = ({ turno = '--', piezas = 0 }: Props) => {
         <Package className={classesIconsSmall} />
 
         <div className="flex flex-col">
-          <span className="text-xs sm:text-lg opacity-70">
+          <span className="text-xs sm:text-md opacity-70">
             Piezas procesadas
           </span>
-          <span className="font-bold text-base sm:text-xl">{piezas ?? 0}</span>
+          <span className="font-bold text-base sm:text-md">{piezas ?? 0}</span>
         </div>
       </div>
     </div>

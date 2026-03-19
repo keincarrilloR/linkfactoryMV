@@ -14,7 +14,7 @@ const Item = ({ title = '--', info = 'Sin información', children }: Props) => {
       </span>
       <div className="flex items-center gap-2 bg-gray p-2 sm:p-3 rounded-lg">
         {children}
-        <p className="text-sm sm:text-lg font-medium uppercase">{info}</p>
+        <p className="text-sm sm:text-md font-medium uppercase">{info}</p>
       </div>
     </div>
   )
