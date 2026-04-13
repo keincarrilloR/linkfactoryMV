@@ -14,9 +14,9 @@ const getColor = (
 ) => {
   if (isNaN(value) || isNaN(min) || isNaN(max)) return 'black'
 
-  if (estado === 'Detenido') return 'stop'
-
   if (min === 0 && max === 0) return 'purple'
+
+  if (estado === 'Detenido') return 'stop'
 
   const { mediaInferior, mediaSuperior } = medias(max, min, nom)
   if (

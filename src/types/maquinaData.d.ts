@@ -59,6 +59,34 @@ export interface Variables {
   tempAguaDestSalThermatool?: Valores
   potThermatool?: Valores
   voltPlacaThermatool?: Valores
+  numeroPaquetes?: Valores
+  numeroTubosxPaquete?: Valores
+  numeroTubosTPF?: Valores
+  numeroTubosTC?: Valores
+  numeroPaquetesM?: Valores
+  numeroFilamentos?: Valores
+  numeroTufil1?: Valores
+  numeroTufil2?: Valores
+  enMarcha?: Valores
+  enError?: Valores
+  imanesMarcha?: Valores
+  galopanteError: ?Valores
+  autoManGnral: ?Valores
+  autoManGalopante?: Valores
+  autoRosc1?: Valores
+  rosc1Marcha?: Valores
+  giroRosc1?: Valores
+  manualRosc1?: Valores
+  autoRosc2?: Valores
+  manualRosc2?: Valores
+  giroRosc2?: Valores
+  runWalkingRosc4?: Valores
+  tempTubo?: Valores
+  corrPre?: Valores
+  voltPre?: Valores
+  frecPre?: Valores
+  velProgramada?: Valores
+  potPre?: Valores
 }
 
 // Tipo para cada Maquina

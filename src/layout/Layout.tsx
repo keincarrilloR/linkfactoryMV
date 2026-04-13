@@ -23,7 +23,7 @@ const DashboardLayout = ({ children, title, backLink = false }: Props) => {
           <h1 className="text-sm sm:text-lg md:text-2xl font-bold uppercase tracking-widest text-white leading-tight">
             {title ?? (
               <>
-                LinkFactory <span className="opacity-40">—</span> MX
+                LinkFactory <span className="opacity-40">—</span> MV
               </>
             )}
           </h1>

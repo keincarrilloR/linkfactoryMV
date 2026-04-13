@@ -14,7 +14,6 @@ const OdtArtDes = ({ maquinaId }: Props) => {
   const articulo = data?.informativo?.odtArtDesc?.articulo
   const odt = data?.informativo?.odtArtDesc?.odt
   const descripcion = data?.informativo?.odtArtDesc?.descripcion
-
   return (
     <div className="p-3 sm:p-4 bg-panel rounded-lg">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
