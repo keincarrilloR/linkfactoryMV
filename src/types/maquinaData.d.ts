@@ -89,6 +89,7 @@ export interface Variables {
   potPre?: Valores
   rpmMandril1?: Valores
   rpmMandril2?: Valores
+  NTUBTPF?: Valores
 }
 
 // Tipo para cada Maquina
