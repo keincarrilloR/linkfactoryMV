@@ -87,6 +87,8 @@ export interface Variables {
   frecPre?: Valores
   velProgramada?: Valores
   potPre?: Valores
+  rpmMandril1?: Valores
+  rpmMandril2?: Valores
 }
 
 // Tipo para cada Maquina

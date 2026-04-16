@@ -1,7 +1,7 @@
 import {
   CircleGauge,
   Droplet,
-  //Gauge,
+  Gauge,
   Package,
   //PillBottle,
   PlugZap,
@@ -39,7 +39,7 @@ export const MAQUINAS = [
     maquinaId: 'mvrs3',
     nombre: 'Roscadora Aluminio',
     galvanizado: false,
-    variables: true
+    variables: false
   }
 ]
 
@@ -108,6 +108,20 @@ export const VARIABLES_KEYS: MaquinaKey[][] = [
       grafana:
         'http://monitormx.rymco.io:9030/public-dashboards/b5672b592aad43c88444bda7e3ec9520?orgId=1',
       icon: <Zap className={classesIcons} />
+    }
+  ],
+  [
+    {
+      key: 'rpmMandril1',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/b5672b592aad43c88444bda7e3ec9520?orgId=1',
+      icon: <Gauge className={classesIcons} />
+    },
+    {
+      key: 'rpmMandril2',
+      grafana:
+        'http://monitormx.rymco.io:9030/public-dashboards/b49e48001313436583bfa1c2d651b5ea?orgId=1',
+      icon: <Gauge className={classesIcons} />
     }
   ]
 ]
