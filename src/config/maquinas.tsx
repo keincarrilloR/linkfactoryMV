@@ -1,6 +1,6 @@
 import {
   CircleGauge,
-  Cuboid,
+  //Cuboid,
   Droplet,
   Gauge,
   Package,
@@ -40,8 +40,8 @@ export const MAQUINAS = [
     maquinaId: 'mvrs3',
     nombre: 'Roscadora Aluminio',
     galvanizado: false,
-    variables: true
-  }
+    variables: false
+  },
 ]
 
 const round2 = (v: number) => Number(v.toFixed(2))
@@ -68,13 +68,13 @@ export const VARIABLES_KEYS: MaquinaKey[][] = [
       grafana:
         'http://monitormx.rymco.io:9030/public-dashboards/b49e48001313436583bfa1c2d651b5ea?orgId=1',
       icon: <Package className={classesIcons} />
-    },
-    {
+    }
+    /*{
       key: 'NTUBTPF',
       grafana:
         'http://monitormx.rymco.io:9030/public-dashboards/b49e48001313436583bfa1c2d651b5ea?orgId=1',
       icon: <Cuboid className={classesIcons} />
-    }
+    }*/
   ],
   // Pintadora
   [
@@ -117,6 +117,7 @@ export const VARIABLES_KEYS: MaquinaKey[][] = [
       icon: <Zap className={classesIcons} />
     }
   ],
+  // Roscadora de aluminio
   [
     {
       key: 'rpmMandril1',
@@ -130,5 +131,6 @@ export const VARIABLES_KEYS: MaquinaKey[][] = [
         'http://monitormx.rymco.io:9030/public-dashboards/b49e48001313436583bfa1c2d651b5ea?orgId=1',
       icon: <Gauge className={classesIcons} />
     }
-  ]
+  ],
+
 ]
