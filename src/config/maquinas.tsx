@@ -7,6 +7,7 @@ import {
   //PillBottle,
   PlugZap,
   RefreshCcwDot,
+  Thermometer,
   //Thermometer,
   //Waves,
   Zap
@@ -24,6 +25,12 @@ interface MaquinaKey {
 
 // Las maquinas deben de seguir el orden que se quieren mostrar
 export const MAQUINAS = [
+{
+    maquinaId: 'mvm001',
+    nombre: 'Molino 1',
+    galvanizado: true,
+    variables: true
+  },
   {
     maquinaId: 'mvrs2',
     nombre: 'Roscadora N4',
@@ -50,11 +57,27 @@ const round2 = (v: number) => Number(v.toFixed(2))
 
 // Las variables deben de seguir el orden que se quieren mostrar, el primer array es para la maquina 1, el segundo para la maquina 2, etc. Si una maquina no tiene galvanizado o variables, se deja un array vacio [] en su lugar.
 export const GALVANIZADO_KEYS: MaquinaKey[][] = [
-  // Roscadora N4
-  []
+  //   Molino 1
+  [
+    {
+      key: 'tempZinc',
+      grafana:
+        'http://monitormv.rymco.io:9030/public-dashboards/b82e853dc8a34c4f82af4113ba57db16',
+      icon: <Thermometer className={classesIcons} />
+    }
+  ]
 ]
 
 export const VARIABLES_KEYS: MaquinaKey[][] = [
+// Molino 1
+  [
+    {
+      key: 'corrMotorFormador',
+      grafana:
+        'http://monitormv.rymco.io:9030/public-dashboards/95f48d329cf1499883d3b56ab3094001?orgId=1',
+      icon: <PlugZap className={classesIcons} />
+    }
+  ],
   // Roscadora N4
   [
     {

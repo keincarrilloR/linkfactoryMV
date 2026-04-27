@@ -44,7 +44,7 @@ export const SocketProvider = ({ children }: SocketProviderProps) => {
     socket.onmessage = event => {
       try {
         const data = JSON.parse(event.data) // Convertimos el mensaje a JSON
-        const ids = ['mvrs2', 'mvpt1', 'mvrs3'] // IDs de las máquinas que esperamos recibir
+        const ids = ['mvm001','mvrs2', 'mvpt1', 'mvrs3'] // IDs de las máquinas que esperamos recibir
 
         const nuevas: MaquinaData[] = ids
           .filter(id => data[id]) // Buscamos el id(maquina) que tiene data

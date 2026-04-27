@@ -14,6 +14,7 @@ const MaquinaPage = () => {
   if (!maquina) return <Navigate to="/" replace />
 
   const { maquinaId, nombre, galvanizado, variables } = maquina
+  
   return (
     <DashboardLayout title={`${nombre} — MV`} backLink>
       <div className="grid gap-6">
