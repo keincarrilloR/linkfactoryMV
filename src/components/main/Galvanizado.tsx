@@ -11,13 +11,13 @@ interface Props {
 
 const Galvanizado = ({ maquinaId }: Props) => {
   const { getMaquina } = useSocket()
-  const variables = getMaquina(maquinaId)?.variables
+  const variables = getMaquina(maquinaId)?.galvanizado
 
   if (!variables) return null
-
   const maquinaIndex = MAQUINAS.findIndex(
     maquina => maquina.maquinaId === maquinaId
   )
+
   const keysActuales = GALVANIZADO_KEYS[maquinaIndex] ?? []
   const items = keysActuales.map(({ key, grafana, icon, transform }) => {
     const variable = variables[key]

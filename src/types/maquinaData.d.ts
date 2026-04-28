@@ -90,6 +90,7 @@ export interface Variables {
   rpmMandril1?: Valores
   rpmMandril2?: Valores
   NTUBTPF?: Valores
+  corrMotorFormador: Valores
 }
 
 // Tipo para cada Maquina
@@ -98,6 +99,7 @@ interface MaquinaData {
   nombre: string
   informativo: Informativo
   variables: Variables
+  galvanizado: Variables
 }
 
 export type { MaquinaData }
